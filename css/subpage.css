@@ -3,8 +3,8 @@
   --font-headline: 'Manrope', sans-serif;
   --color-primary: #af101a;
   --color-primary-container: #d32f2f;
-  --color-surface: #f9f9f9;
-  --color-surface-card: #ffffff;
+  --color-surface: #f3eeed;
+  --color-surface-card: #faf6f5;
   --color-on-surface: #1a1c1c;
   --color-secondary: #5f5e5e;
   --border-radius: 12px;
@@ -32,7 +32,7 @@ html, body {
 /* TOP SECTION */
 #top {
   padding: 4rem 0 5rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, var(--color-surface) 100%);
+  background: linear-gradient(180deg, var(--color-surface-card) 0%, var(--color-surface) 100%);
   border-bottom: 1px solid #eaeaea;
 }
 

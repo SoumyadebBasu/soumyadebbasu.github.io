@@ -133,3 +133,38 @@ if (formPopup) {
         attachInteractiveGlow();
     }
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Global Scroll Reveal & Staggered Reveal Animations
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    const revealSelectors = [
+        '.section-title',
+        '.np-wrapper',
+        '#about .column-left',
+        '#about .column-right',
+        '.client-slider .clients',
+        '.contact-left',
+        '.contact-right'
+    ];
+    
+    document.querySelectorAll(revealSelectors.join(', ')).forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+    });
+
+    // Staggered reveal components
+    document.querySelectorAll('.service-item').forEach(el => {
+        el.classList.add('staggered-reveal');
+        revealObserver.observe(el);
+    });
+});
