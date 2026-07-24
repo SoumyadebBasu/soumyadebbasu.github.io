@@ -15,6 +15,51 @@ nextBtn.className = "modal-next";
 nextBtn.innerHTML = "&#10095;";
 modal.appendChild(nextBtn);
 
+// Inject swipe tip for touch devices
+const swipeTip = document.createElement("div");
+swipeTip.className = "swipe-tip";
+swipeTip.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> <span>Swipe to navigate</span>';
+modal.appendChild(swipeTip);
+
+const tipStyle = document.createElement('style');
+tipStyle.innerHTML = `
+.swipe-tip {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.6rem;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    pointer-events: none;
+    z-index: 1000;
+}
+.swipe-tip i {
+    animation: swipeAnimation 2s infinite ease-in-out;
+}
+@keyframes swipeAnimation {
+    0% { transform: translateX(0); opacity: 1; }
+    30% { transform: translateX(-20px); opacity: 0; }
+    40% { transform: translateX(20px); opacity: 0; }
+    70% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+.swipe-tip.show-tip {
+    display: flex;
+    animation: fadeOutTip 0.5s forwards 4s;
+}
+@keyframes fadeOutTip {
+    to { opacity: 0; visibility: hidden; }
+}
+`;
+document.head.appendChild(tipStyle);
+
 // Gallery state
 const galleryItems = Array.from(document.querySelectorAll("#bottom .item"));
 let currentIndex = 0;
@@ -35,6 +80,13 @@ function openModal(index, updateHistory = true) {
   
   if (updateHistory) {
     history.pushState({modal: true}, "");
+  }
+
+  // Show swipe tip on touch devices
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    swipeTip.classList.remove('show-tip');
+    void swipeTip.offsetWidth; // trigger reflow
+    swipeTip.classList.add('show-tip');
   }
 }
 
@@ -122,6 +174,9 @@ modal.addEventListener('touchend', e => {
 
 function handleSwipe() {
   const threshold = 50;
+  if (Math.abs(touchendX - touchstartX) > threshold) {
+      swipeTip.style.display = 'none'; // Hide tip immediately upon successful swipe
+  }
   if (touchendX < touchstartX - threshold) openModal(currentIndex + 1, false); // swipe left -> next
   if (touchendX > touchstartX + threshold) openModal(currentIndex - 1, false); // swipe right -> prev
 }
