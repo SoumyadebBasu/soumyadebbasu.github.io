@@ -1,3 +1,14 @@
+// Sync SVG glow rect border-radius with button border-radius
+(function setGlowEffectRx() {
+    const glowEffects = document.querySelectorAll('.glow');
+    glowEffects.forEach(element => {
+        const rx = getComputedStyle(element).borderRadius;
+        element.querySelectorAll('rect').forEach(rect => {
+            rect.setAttribute('rx', rx);
+        });
+    });
+})();
+
 const hamburger = document.querySelector(".header .navbar .navlist .hamburger");
 const mobile_menu = document.querySelector(".header .navbar .navlist ul");
 const menu_item = document.querySelectorAll(".header .navbar .navlist ul li a");
