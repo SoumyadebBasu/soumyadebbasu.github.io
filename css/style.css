@@ -362,8 +362,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
 .glow-line {
   width: calc(100% - var(--container-offset));
   height: calc(100% - var(--container-offset));
-  x: calc(var(--container-offset) / 2);
-  y: calc(var(--container-offset) / 2);
+  transform: translate(calc(var(--container-offset) / 2), calc(var(--container-offset) / 2));
   fill: transparent;
   stroke: transparent;
   stroke-width: 5px;
