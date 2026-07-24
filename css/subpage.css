@@ -117,8 +117,8 @@ html, body {
 }
 .hero-text-wrap p {
   font-family: var(--font-sans);
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
   color: var(--color-secondary);
   font-weight: 400;
 }
@@ -180,8 +180,8 @@ html, body {
 }
 .feature-card p {
   font-family: var(--font-sans);
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
   color: var(--color-secondary);
 }
 
@@ -236,7 +236,7 @@ html, body {
 #bottom .item p.item_type {
   color: #ffffff;
   font-family: var(--font-headline);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   width: 100%;
   padding: 1.6rem;
@@ -362,11 +362,11 @@ html, body {
   margin: 0;
 }
 .cta-banner p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: rgba(255,255,255,0.7);
   max-width: 600px;
-  line-height: 2.2rem;
+  line-height: 2.4rem;
   margin: 0;
 }
 .cta-actions {
@@ -388,7 +388,7 @@ html, body {
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   transition: .3s ease;
@@ -439,7 +439,7 @@ html, body {
 .whatsapp_us .whatsapp_text {
   text-decoration: none;
   font-family: var(--font-sans);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
@@ -460,9 +460,9 @@ html, body {
 
 @media only screen and (min-width: 1100px) {
   .modal-content { width: 60%; }
-  #bottom .item p { font-size: 1.5rem; }
+  #bottom .item p { font-size: 1.6rem; }
   .get-a-quote-button, .back-button {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: 1rem;
   }
 }

@@ -214,7 +214,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
   color: var(--color-surface-card);
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .1rem;
@@ -282,11 +282,11 @@ img { height: 100%; width: 100%; object-fit: cover; }
   margin-top: 10px;
 }
 #services .service-info p, #services .service-info ul {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-secondary);
   margin-top: 1.5rem;
-  line-height: 2.2rem;
+  line-height: 2.4rem;
   text-align: start;
 }
 #services .service-info ul {
@@ -297,7 +297,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
   margin-bottom: 0.5rem;
 }
 #services .service-info ul + p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   font-style: italic;
   color: var(--color-secondary);
@@ -565,7 +565,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
 #contact .contact-left label {
   width: 100%;
   padding: 0 0 6px 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-on-surface);
   display: block;
@@ -603,8 +603,8 @@ img { height: 100%; width: 100%; object-fit: cover; }
   color: var(--color-on-surface);
 }
 #contact .contact-info h2 {
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
   font-weight: 400;
   color: var(--color-secondary);
 }
@@ -629,7 +629,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
   border: 1px solid #ccc;
   margin: 4px 0 18px 0;
   background-color: var(--color-surface-card);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   font-family: var(--font-sans);
   color: var(--color-on-surface);
@@ -646,7 +646,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .1rem;
@@ -687,7 +687,7 @@ img { height: 100%; width: 100%; object-fit: cover; }
 #footer .socialmedia-icon:hover img { transform: scale(1.1); }
 #footer p {
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #aaaaaa;
   justify-content: center;
   font-weight: 400;
@@ -715,8 +715,8 @@ img { height: 100%; width: 100%; object-fit: cover; }
   #services .service-item .service-image { height: 100%; }
   #services .service-info h1 { font-size: 3.5rem; }
   #services .service-info h2 { font-size: 1.8rem; }
-  #services .service-info p, #services .service-info ul { font-size: 1.4rem; line-height: 2.2rem; }
-  #services .service-info ul + p { font-size: 1.3rem; }
+  #services .service-info p, #services .service-info ul { font-size: 1.6rem; line-height: 2.4rem; }
+  #services .service-info ul + p { font-size: 1.5rem; }
   #about .about { flex-direction: column; align-items: center; text-align: left; }
   #about .about-bottom { flex-direction: row-reverse; align-items: flex-start; }
   #about .column-left { padding: 0 0 0 5%; }
@@ -762,8 +762,8 @@ img { height: 100%; width: 100%; object-fit: cover; }
   #hero { background-image: linear-gradient(to bottom, rgba(26,28,28,0.5), rgba(26,28,28,0.8)), url(../img/hero-bg.jpg); }
   #hero h1 { font-size: 6rem; margin-top: 35vh; }
   #hero h2 { font-size: 4rem; }
-  #services .service-info p, #services .service-info ul { font-size: 1.6rem; line-height: 2.6rem; }
-  #services .service-info ul + p { font-size: 1.4rem; }
+  #services .service-info p, #services .service-info ul { font-size: 1.8rem; line-height: 2.8rem; }
+  #services .service-info ul + p { font-size: 1.6rem; }
   #contact .contact-items { margin-top: 0; margin-bottom: 50px; }
   #contact .contact-item { padding: 50px 30px; }
   #contact .icon { width: 60px; height: 60px; }
